@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+  devise_for :users
+  devise_for :views
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-   resources :users, only: %i[index show] do 
+   root to: 'groups#index'
+   
+  
     resources :groups do
        resources :entities
     end   
-    end
+
 end
