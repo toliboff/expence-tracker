@@ -1,5 +1,21 @@
 <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
+
 <h1>CATEGORIES</h1>
-<%= @groups.count %>
+Total: $<%= @total %>
+
+<ul>
+  <% @groups.each do |group|%>
+    <li>
+      <img src=''>
+      <div>
+        <%= link_to user_group_path(params[:user_id], group) do %>
+          <h5><%= group.name %></h5>
+        <% end %>
+        <span><%= group.created_at%><span>
+      </div>
+      <span>$<%= group.entities.sum(:amount) %></span>
+    </li>
+  <% end %>
+</ul>
 
 <%= link_to  'ADD CATEGORY', new_user_group_path(@user) %>

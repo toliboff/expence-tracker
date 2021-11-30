@@ -5,6 +5,15 @@ class GroupsController < ApplicationController
   def index
     @user = current_user
     @groups = Group.order(:created_at).where(user: @user)
+    @total = 0
+    @groups.each do |group|
+      @total += group.entities.sum(:amount)
+    end
+  end
+
+  def show
+    @user = current_user
+    @groups = Group.order(:created_at).where(user: @user)
   end
 
   def new
