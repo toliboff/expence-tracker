@@ -1,0 +1,5 @@
+<%= form_with model: @group,  url: user_groups_path(@user), method: 'post' do |form| %>
+  <%= form.text_field :name, placeholder:'Category name' %>
+  <%= form.text_field :icon, placeholder:'icon' %>
+  <%= form.submit %>
+<% end %>
