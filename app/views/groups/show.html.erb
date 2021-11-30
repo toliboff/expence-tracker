@@ -1,14 +1,18 @@
 <h1>TRANSACTIONS</h1>
 
+Selected category: <%= @group.name %><br>
+Total: <%= @total %>
 <ul>
-  <% @groups.each do |group|%>
+  <% @entities.each do |entity|%>
     <li>
       <img src=''>
       <div>
-        <h5><%= group.name %></h5>
-        <span><%= group.created_at%><span>
+        <h5><%= entity.name %></h5>
+        <span><%= entity.created_at %><span>
       </div>
-      <span>$<%= group.amount%></span>
+      <span>$<%= entity.amount %></span>
     </li>
   <% end %>
 </ul>
+
+<%= link_to  'ADD ENTITY', new_user_group_entity_path(@group.user, @group) %>
