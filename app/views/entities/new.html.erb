@@ -1,0 +1,6 @@
+<%= form_with model: @entity,  url: user_group_entities_path(@user, params[:group_id]), method: 'post' do |form| %>
+  <%= form.text_field :name, placeholder:'Entity name' %>
+  <%= form.number_field :amount, placeholder:'Amount' %>
+  <%= form.collection_check_boxes :group_ids, @groups, :id, :name, { hide_label: true } %>
+  <%= form.submit %>
+<% end %>
