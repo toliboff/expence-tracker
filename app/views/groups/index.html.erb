@@ -1,9 +1,11 @@
 
 <%# <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
-<div class="container border flex-column">
+<div class="container flex-column">
    <%= render partial: 'shared/header', locals: {title: 'categories'} %>
-
-Total: $<%= @total %>
+  <div class="total-amount flex-row justify-space-between">
+    <span>Total amount:</span>
+    <span>$<%= '%.2f' % @total %></span>
+  </div>
 
 <ul class='list flex-column'>
   <% @groups.each do |group|%>
@@ -22,7 +24,7 @@ Total: $<%= @total %>
           
         </div>
         <div>
-          <span>$<%= group.entities.sum(:amount) %></span>
+          <span>$<%= '%.2f' % group.entities.sum(:amount) %></span>
         </div>
       </div>
       

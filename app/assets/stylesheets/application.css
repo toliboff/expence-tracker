@@ -18,6 +18,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #8d8c8c;
 }
 
 .profiler-results {
@@ -89,4 +90,11 @@ a {
 
 .border {
   border: 1px solid red;
+}
+
+.total-amount {
+  padding: 0.8rem 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 2px 3px 2px #ccc;
+  margin-bottom: 0.8rem;
 }
