@@ -1,7 +1,7 @@
 <div class='container'>
   <%= form_with model: @entity,  url: user_group_entities_path(@user, params[:group_id]), method: 'post', class: "flex-column form", id:'transaction_form' do |form| %>
    <%= render partial: 'shared/header', :locals => { :title => "NEW TRANSACTION", :back_url => user_group_path(@user,  params[:group_id]), :back_button => true,  :form_id => 'transaction_form'  } %>
-    <%= form.text_field :name, placeholder:'Transaction name' %>
+    <%= form.text_field :name, autofocus: true, placeholder:'Transaction name' %>
     <%= form.number_field :amount, step: 0.01, placeholder:'Amount' %>
     
     <%= field_set_tag 'Categories', class:'checkboxes' do %>

@@ -124,6 +124,10 @@ a {
   color: rgb(82, 81, 81);
 }
 
+.form input:focus {
+  outline: 1px solid rgb(88, 172, 250);
+}
+
 .submit {
   color: #fff;
   border: none;
@@ -132,7 +136,8 @@ a {
   cursor: pointer;
 }
 
-.checkboxes {
+.checkboxes,
+.icons {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.3rem;
@@ -143,8 +148,26 @@ a {
   background-color: #fff;
 }
 
+.icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.category-icon {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #ccc;
+}
+
+.category-icon:hover {
+  opacity: 0.7;
+}
+
+.selected {
+  border: 2px solid rgb(8, 126, 236);
+}
+
 legend {
   padding: 0.3rem;
   font-size: 1.2rem;
 }
-

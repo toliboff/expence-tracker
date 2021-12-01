@@ -10,7 +10,7 @@
 <ul class='list flex-column'>
   <% @groups.each do |group|%>
     <li class='card flex-row'>
-      <%= image_tag('diet.png', class: 'icon') %>
+      <%= image_tag(group.icon, class: 'icon') %>
       <div class='group-info flex-row'>
         <div class='flex-column justify-space-between'>
           <%= link_to user_group_path(params[:user_id], group) do %>
