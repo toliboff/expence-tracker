@@ -1,5 +1,8 @@
-<%= form_with model: @group,  url: user_groups_path(@user), method: 'post' do |form| %>
-  <%= form.text_field :name, placeholder:'Category name' %>
-  <%= form.text_field :icon, placeholder:'icon' %>
-  <%= form.submit %>
-<% end %>
+<div class='container border'>
+  <%= form_with model: @group,  url: user_groups_path(@user), method: 'post', class: "flex-column form", id:'category_form' do |form| %>
+    <%= render partial: 'shared/header', :locals => { :title => "NEW CATEGORY", :back_url => user_groups_path, :back_button => true,  :form_id => 'category_form'  } %>
+    <%= form.text_field :name, placeholder:'Category name' %>
+    <%= form.text_field :icon, placeholder:'icon' %>
+
+  <% end %>
+</div>

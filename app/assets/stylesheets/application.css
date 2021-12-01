@@ -66,6 +66,10 @@ a {
   background-color: #fff;
 }
 
+.card:last-child {
+  margin-bottom: 1.5rem;
+}
+
 .group-info {
   flex-grow: 1;
   margin: 1rem 0.5rem;
@@ -105,3 +109,42 @@ a {
   text-align: center;
   flex-grow: 1;
 }
+
+.date {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.form input {
+  margin: 0.2rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #cac8c8;
+  border-radius: 3px;
+  color: rgb(82, 81, 81);
+}
+
+.submit {
+  color: #fff;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.checkboxes {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.3rem;
+  margin: 0.3rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+legend {
+  padding: 0.3rem;
+  font-size: 1.2rem;
+}
+
