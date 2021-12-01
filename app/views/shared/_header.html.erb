@@ -1,7 +1,12 @@
 <header class="header flex-row">
   <div>
-  <%= link_to user_groups_path do %>
-    <%= image_tag('left-arrow.png', size: "20x20") %></div>
+  <%  if back_button  %>
+    <%= link_to back_url do %>
+    <%= image_tag('left-arrow.png', size: "20x20") %>
+    <% end %>
   <% end %>
-  <div><%= title %></div>
+  </div>
+  <div class="title">
+    <%= title %>
+  </div>
 </header>
