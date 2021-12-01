@@ -1,12 +1,18 @@
 <header class="header flex-row">
   <div>
-  <%  if back_button  %>
-    <%= link_to back_url do %>
-    <%= image_tag('left-arrow.png', size: "20x20") %>
+    <%  if back_button  %>
+      <%= link_to back_url do %>
+      <%= image_tag('left-arrow.png', size: "20x20") %>
+      <% end %>
     <% end %>
-  <% end %>
   </div>
   <div class="title">
     <%= title %>
   </div>
+  <div>
+    <%= link_to destroy_user_session_path, method: :delete do %>
+      <%= image_tag('log-out.png', size: "20x20") %>
+    <% end %>
+  </div>
+
 </header>
