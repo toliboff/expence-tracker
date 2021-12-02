@@ -124,10 +124,6 @@ a {
   color: rgb(82, 81, 81);
 }
 
-.form input:focus {
-  outline: 1px solid rgb(88, 172, 250);
-}
-
 .submit {
   color: #fff;
   border: none;
@@ -170,4 +166,35 @@ a {
 legend {
   padding: 0.3rem;
   font-size: 1.2rem;
+}
+
+.new_user {
+  display: flex;
+  flex-direction: column;
+}
+
+.fields {
+  background-color: #fff;
+  margin-top: 0.5rem;
+}
+
+.fields input {
+  border: none;
+  border-top: 1px solid rgb(230, 229, 229);
+  margin: 0 0.3rem;
+  padding: 0.5em 0;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+.fields input:first-child {
+  border-top: none;
+}
+
+::placeholder {
+  color: #ccc;
+}
+
+.form input:focus {
+  outline: 1px solid rgb(88, 172, 250);
 }
