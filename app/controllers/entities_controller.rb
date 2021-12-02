@@ -11,11 +11,10 @@ class EntitiesController < ApplicationController
   def create
 
     @entity = Entity.new(entity_params)
-    # @entity = Entity.new(entity_params[:name], entity_params[:amount])
     @entity.author = current_user
 
     if @entity.save
-      redirect_to user_groups_path(current_user), notice:'Entity added succesfully'
+      redirect_to user_group_path(current_user, params[:group_id]), notice:'Transaction added succesfully'
     else
       render :new, notice: "Ooops, something went wrong"
     end
