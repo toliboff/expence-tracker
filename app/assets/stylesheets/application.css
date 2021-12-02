@@ -14,11 +14,17 @@
  *= require_self
  */
 
+@font-face {
+  font-family: 'Proxima Nova Font';
+  src: url('Proxima Nova Font.otf');
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: #8d8c8c;
+  font-family: "Proxima Nova Font", Arial, Helvetica, sans-serif;
 }
 
 .profiler-results {
@@ -115,6 +121,10 @@ a {
   margin-top: 0.5rem;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .form input {
   margin: 0.2rem;
   font-size: 1rem;
@@ -182,7 +192,7 @@ legend {
   border: none;
   border-top: 1px solid rgb(230, 229, 229);
   margin: 0 0.3rem;
-  padding: 0.5em 0;
+  padding: 0.5em;
   font-size: 1.1rem;
   outline: none;
 }
@@ -202,4 +212,14 @@ legend {
 
 .form input:focus {
   outline: 1px solid rgb(88, 172, 250);
+}
+
+.notice {
+  color: #18ad52;
+  margin: 0.2rem;
+}
+
+.alert {
+  color: #da3309;
+  margin: 0.2rem;
 }
