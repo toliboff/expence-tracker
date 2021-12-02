@@ -28,7 +28,7 @@ class GroupsController < ApplicationController
     @group.user = current_user
     
     if @group.save
-      redirect_to user_groups_path(current_user)
+      redirect_to user_groups_path(current_user), notice: 'Category added successfully'
     else
       render :new
     end

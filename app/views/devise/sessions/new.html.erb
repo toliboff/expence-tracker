@@ -2,6 +2,7 @@
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <%= render partial: 'shared/header', :locals => { :title => "LOGIN", :back_url => root_path, :back_button => true,  :form_id => 'new_user', :action_button => 'Log In'  } %>
+     <%= render partial:'shared/messages'%>
     <div class='fields flex-column'>
       <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
       <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password' %>
