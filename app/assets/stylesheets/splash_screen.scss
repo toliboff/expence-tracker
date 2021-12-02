@@ -13,7 +13,15 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #696969;
+  color: #3778c2;
+  h1 {
+    color: #3778c2;
+    font-size: 3rem;
+    
+    span{
+      color: #5d9adf;
+    }
+    }
 }
 
 .login {
