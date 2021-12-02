@@ -11,7 +11,7 @@
   </div>
   <div>
     <% if form_id !='' %>
-        <button onClick="document.getElementById('<%= form_id %>').submit" class='submit' >SAVE</button>
+        <button onClick="document.getElementById('<%= form_id %>').submit" class='submit' ><%= action_button %></button>
       <% else %>
         <%= link_to destroy_user_session_path, method: :delete do %>
           <%= image_tag('log-out.png', size: "20x20") %>
