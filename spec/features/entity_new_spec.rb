@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Entities', type: :feature do
   describe '#new page' do
     before do
-      user = User.create(name: 'Tolib', email: 'tolib@mail.com', password: '123456' )
+      User.create(name: 'Tolib', email: 'tolib@mail.com', password: '123456')
       Group.create(name: 'Foods', icon: 'food', user: User.last)
       Group.create(name: 'Education', icon: 'education', user: User.last)
       Group.create(name: 'Sport', icon: 'sport', user: User.last)
