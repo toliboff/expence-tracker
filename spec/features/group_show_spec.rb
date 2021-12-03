@@ -3,7 +3,12 @@ require 'rails_helper'
 RSpec.describe 'Groups', type: :feature do
   describe '#show page' do
     before do
+      user = User.create(name: 'Tolib', email: 'tolib@mail.com', password: '123456' )
       visit new_user_session_path
+      Group.create(name: 'Foods', icon: 'food', user: User.last)
+      Group.create(name: 'Education', icon: 'education', user: User.last)
+      Group.create(name: 'Sport', icon: 'sport', user: User.last)
+
       @food = Group.find_by(name: 'Foods')
       entity = Entity.create(name: 'Pizza', amount: 12, author: User.last)
       entity.group_ids = @food.id

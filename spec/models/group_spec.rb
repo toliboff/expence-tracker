@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Group, type: :model do
-  user = User.last
+  user = User.create(name: 'Tolib', email: 'tolib@mail.com', password: '123456' )
 
   subject do
     described_class.new(name: 'Foods',
