@@ -4,11 +4,11 @@ RSpec.describe 'Groups', type: :feature do
   describe '#index page' do
     before do
       visit new_user_session_path
-      tolib = User.create(name: 'Tolib', email: 'tolib@mail.com', password: '123456')
+      User.create(name: 'Tolib', email: 'tolib@mail.com', password: '123456')
       
-      Group.create(name: "Foods", icon:'food', user: tolib)
-      Group.create(name: "Education", icon:'education', user: tolib)
-      Group.create(name: "Sport", icon:'sport', user: tolib)
+      Group.create(name: "Foods", icon:'food', user: User.last)
+      Group.create(name: "Education", icon:'education', user: User.last)
+      Group.create(name: "Sport", icon:'sport', user: User.last)
 
       fill_in 'Email', with: 'tolib@mail.com'
       fill_in 'Password', with: '123456'
