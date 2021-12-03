@@ -16,19 +16,18 @@ RSpec.describe 'Entities', type: :feature do
     end
 
     it 'should have input field for adding a name' do
-      expect(page).to have_field("Transaction name")
+      expect(page).to have_field('Transaction name')
     end
 
     it 'should have input field for adding an amount' do
-      expect(page).to have_field("Amount")
+      expect(page).to have_field('Amount')
     end
 
     it 'should have list of categories to select' do
-      expect(page).to have_content("Categories")
-      expect(page).to have_content("Foods")
-      expect(page).to have_content("Education")
-      expect(page).to have_content("Sport")
+      expect(page).to have_content('Categories')
+      expect(page).to have_content('Foods')
+      expect(page).to have_content('Education')
+      expect(page).to have_content('Sport')
     end
-
-   end
+  end
 end
