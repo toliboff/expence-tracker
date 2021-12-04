@@ -1,0 +1,14 @@
+<div class='container center'>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  
+<%= render partial: 'shared/header', :locals => { :title => "RESET PASSWORD", :back_url => root_path, :back_button => true,  :form_id => 'new_user', :action_button => 'Send'  } %>
+<%= render "devise/shared/error_messages", resource: resource %>
+  <div class='fields flex-column'>
+  
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
+
+  </div>
+<% end %>
+
+</div>
