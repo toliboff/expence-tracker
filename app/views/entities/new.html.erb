@@ -18,37 +18,6 @@
     <%= render partial: 'shared/messages' %>
     <%= form.text_field :name, id:'name', autofocus: true, placeholder:'Transaction name', required: true %>
     <%= form.number_field :amount, id:'amount', step: 0.01, min:0.01, placeholder:'Amount', required: true %>
-    <%= form.hidden_field :checked, id:'checked-items' %>
-    
-    <%= field_set_tag 'Categories', class:'checkboxes' do %>
-      <%= form.collection_check_boxes :group_ids, @groups, :id, :name, { hide_label: true } %>
-    <% end %>
+    <%= form.select :group_ids, @groups.map { |t| [t.name, t.id]}, { :prompt =>'Select category'}, required: true %>
     <% end %>
 </div>
-
-<script>
-  let checked_items = document.querySelector('#checked-items')
-  let name = document.querySelector('#name')
-  let amount = document.querySelector('#amount')
-  let submit_button = document.querySelector('#submit_button')
-
-  setInterval(() => {
-    let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked')
-    checked_items.value = checkboxes.length
-  }, 100);
-
-
-
-const form = document.getElementById('transaction_form');
-form.addEventListener('submit', (event) => { 
-  event.preventDefault()
-  });
-
-function validateSubmit() {
-  if (checked_items.value > 0 && name.value.trim().length>0 && amount.value > 0) {
-    form.submit()
-  }
-}
-
-submit_button.addEventListener('click', validateSubmit)
-</script>

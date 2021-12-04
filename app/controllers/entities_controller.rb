@@ -22,6 +22,6 @@ class EntitiesController < ApplicationController
   private
 
   def entity_params
-    params.require(:entity).permit(:name, :amount, group_ids: [])
+    params.require(:entity).permit(:name, :amount, :group_ids)
   end
 end
